@@ -1,0 +1,242 @@
+if game.PlaceId == 9734866408 then
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+    local Window = Library.CreateLib("3-Point Simulator", "BloodTheme")
+ 
+    -- MAIN
+    local Main = Window:NewTab("Main")
+    local MainSection = Main:NewSection("Main")
+
+    MainSection:NewToggle("Auto Shoot", "Shoots Automatically", function(v)
+        getgenv().autoswinger = v
+        while true do
+        if not getgenv().autoswinger then return end
+        local A_1 = 100
+        local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.4.2"].knit.Services.ProjectileService.RF.ShootBasketball
+        Event:InvokeServer(A_1)
+        wait(2)
+        end
+    end)
+
+    MainSection:NewToggle("Auto Rebirth", "Rebirths Automatically", function(v)
+        getgenv().autoswingers = v
+        while true do
+        if not getgenv().autoswingers then return end
+         local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.4.2"].knit.Services.RebirthService.RF.Rebirth
+         Event:InvokeServer()
+         wait(1)
+        end
+    end)
+
+    local Crates = Window:NewTab("Crates")
+    local CratesSection = Crates:NewSection("Crates")
+
+
+    local CC; --CREATE GLOBAL VARIABLE OF THE USERS SELECTION TO BE USED ANYWHERE
+    CratesSection:NewDropdown("Select Target", "Cook", {"Streets Crate", "Rail Yard Crate", "Central Park Crate", "Times Square Crate", "Ferry Crate", "London Crate",}, function(value)--THIS FUNCTION ALLOWS US TO STORE THE USERS SELECTION
+        CC = value; --STORES THE USERS SELECTION
+    end)
+
+    CratesSection:NewToggle("Auto Open", "Opens Crates Automatically", function(v)
+
+            ---Loop---
+        getgenv().autoswing = v
+        while true do
+        if not getgenv().autoswing then return end
+            ---Loop---
+
+if CC == "Streets Crate" then
+local A_1 = 54618244
+local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.4.2"].knit.Services.GamepassService.RF.HasPass
+Event:InvokeServer(A_1)
+
+local A_1 = "streets"
+local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.4.2"].knit.Services.DuffelService.RF.OpenDuffel
+Event:InvokeServer(A_1)
+wait(1)
+
+else if CC == "Rail Yard Crate" then
+    local A_1 = 54618244
+    local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.4.2"].knit.Services.GamepassService.RF.HasPass
+    Event:InvokeServer(A_1)
+
+    local A_1 = "railyard"
+    local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.4.2"].knit.Services.DuffelService.RF.OpenDuffel
+    Event:InvokeServer(A_1)
+wait(1)
+
+else if CC == "Central Park Crate" then
+    local A_1 = 54618244
+    local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.4.2"].knit.Services.GamepassService.RF.HasPass
+    Event:InvokeServer(A_1)
+
+    local A_1 = "centralPark"
+    local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.4.2"].knit.Services.DuffelService.RF.OpenDuffel
+    Event:InvokeServer(A_1)
+wait(1)
+
+else if CC == "Times Square Crate" then
+    local A_1 = 54618244
+    local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.4.2"].knit.Services.GamepassService.RF.HasPass
+    Event:InvokeServer(A_1)
+
+    local A_1 = "timessquare"
+    local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.4.2"].knit.Services.DuffelService.RF.OpenDuffel
+    Event:InvokeServer(A_1)
+wait(1)
+
+else if CC == "Ferry Crate" then
+    local A_1 = 54618244
+    local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.4.2"].knit.Services.GamepassService.RF.HasPass
+    Event:InvokeServer(A_1)
+
+    local A_1 = "ferry"
+    local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.4.2"].knit.Services.DuffelService.RF.OpenDuffel
+    Event:InvokeServer(A_1)
+wait(1)
+
+else if CC == "London Crate" then
+    local A_1 = 54618244
+    local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.4.2"].knit.Services.GamepassService.RF.HasPass
+    Event:InvokeServer(A_1)
+
+    local A_1 = "london"
+    local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.4.2"].knit.Services.DuffelService.RF.OpenDuffel
+    Event:InvokeServer(A_1)
+wait(1)
+end
+end
+end
+end
+end
+end
+end
+end)
+
+
+
+
+    local Teleport = Window:NewTab("Teleport")
+    local TeleportSection = Teleport:NewSection("Teleport")
+
+    local TC; --CREATE GLOBAL VARIABLE OF THE USERS SELECTION TO BE USED ANYWHERE
+    TeleportSection:NewDropdown("Select Target", "No?", {"The Streets", "Rail Yard", "Central Park", "Times Square", "Ferry", "London",}, function(value)--THIS FUNCTION ALLOWS US TO STORE THE USERS SELECTION
+        TC = value; --STORES THE USERS SELECTION
+    end)
+
+   TeleportSection:NewButton("Teleport", "Teleports To Selected Destination", function(v)
+
+if TC == "The Streets" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1143.61084, 54.7999992, -821.890686, 1, 0, 0, 0, 1, 0, 0, 0, 1)        
+else if TC == "Rail Yard" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-922.151978, 44.6112099, -823.780273, 0.0696153864, -5.8766517e-08, -0.997573912, -1.03545233e-07, 1, -6.6135307e-08, 0.997573912, 1.07898053e-07, 0.0696153864)        
+else if TC == "Central Park" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-527.796509, 57.2112122, -819.90155, 0.0809702128, 2.39521203e-08, -0.996716499, -8.99738026e-08, 1, 1.67218275e-08, 0.996716499, 8.83244056e-08, 0.0809702128)
+else if TC == "Times Square" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-381.395355, 57.0112114, -817.647888, 0.00246048439, -3.25673675e-08, -0.99999696, 3.54847032e-08, 1, -3.24801555e-08, 0.99999696, -3.54046783e-08, 0.00246048439)
+else if TC == "Ferry" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-82.8273849, 56.6112137, -767.637024, 0.0171194077, -6.80358667e-08, -0.999853432, -5.19279286e-10, 1, -6.80547245e-08, 0.999853432, 1.68425984e-09, 0.0171194077)
+else if TC == "London" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(160.359818, 54.0111923, -824.003723, -0.0386855416, -9.6240619e-08, -0.999251425, 4.19517967e-08, 1, -9.79368551e-08, 0.999251425, -4.57091325e-08, -0.0386855416)
+end 
+end
+end
+end
+end
+end
+end)
+
+local Upgrades = Window:NewTab("Upgrades")
+local UpgradesSection = Upgrades:NewSection("Upgrades")
+
+
+local UC; --CREATE GLOBAL VARIABLE OF THE USERS SELECTION TO BE USED ANYWHERE
+UpgradesSection:NewDropdown("Select Upgrade", "Select Upgrade", {"Range", "Accuracy", "Footwork",}, function(value)--THIS FUNCTION ALLOWS US TO STORE THE USERS SELECTION
+    UC = value; --STORES THE USERS SELECTION
+end)
+
+UpgradesSection:NewToggle("Upgrade", "Upgrades ", function(v)
+
+    
+    ---Loop---
+    getgenv().autoswing = v
+    while true do
+    if not getgenv().autoswing then return end
+        ---Loop---
+
+        if UC == "Range" then
+            local A_1 = "range"
+            local A_2 = "1"
+            local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.4.2"].knit.Services.LevelService.RF.LevelAbility
+            Event:InvokeServer(A_1, A_2)
+            wait()
+            else if UC == "Accuracy" then
+                local A_1 = "accuracy"
+                local A_2 = "1"
+                local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.4.2"].knit.Services.LevelService.RF.LevelAbility
+                Event:InvokeServer(A_1, A_2)
+                wait()
+            else if UC == "Footwork" then
+                local A_1 = "footwork"
+                local A_2 = "1"
+                local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.4.2"].knit.Services.LevelService.RF.LevelAbility
+                Event:InvokeServer(A_1, A_2)
+                wait()
+            end
+            end
+        end
+end
+end)
+
+local Misc = Window:NewTab('Misc')
+local MiscSection = Misc:NewSection("Misc")
+
+MiscSection:NewSlider("Walkspeed", "Changes the walkspeed", 250, 16, function(v)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+end)
+
+MiscSection:NewToggle("Auto Claim Daily Rewards", "Claims Rewards", function(v)
+    getgenv().autoswings = v
+    while true do
+    if not getgenv().autoswings then return end
+local A_1 = 300
+local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.4.2"].knit.Services.EngagementService.RF.ClaimReward
+Event:InvokeServer(A_1)
+
+local A_1 = 600
+local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.4.2"].knit.Services.EngagementService.RF.ClaimReward
+Event:InvokeServer(A_1)
+
+local A_1 = 900
+local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.4.2"].knit.Services.EngagementService.RF.ClaimReward
+Event:InvokeServer(A_1)
+
+local A_1 = 1200
+local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.4.2"].knit.Services.EngagementService.RF.ClaimReward
+Event:InvokeServer(A_1)
+
+local A_1 = 1500
+local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.4.2"].knit.Services.EngagementService.RF.ClaimReward
+Event:InvokeServer(A_1)
+
+local A_1 = 1800
+local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.4.2"].knit.Services.EngagementService.RF.ClaimReward
+Event:InvokeServer(A_1)
+
+local A_1 = 2700
+local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.4.2"].knit.Services.EngagementService.RF.ClaimReward
+Event:InvokeServer(A_1)
+
+local A_1 = 3600
+local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.4.2"].knit.Services.EngagementService.RF.ClaimReward
+Event:InvokeServer(A_1)
+
+local A_1 = 5400
+local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.4.2"].knit.Services.EngagementService.RF.ClaimReward
+Event:InvokeServer(A_1)
+wait(10)
+end
+end)
+
+local Credits = Window:NewTab("Credits")
+local CreditsSection = Credits:NewSection("OverK2ll#3442")
+end
